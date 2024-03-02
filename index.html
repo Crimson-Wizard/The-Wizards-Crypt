@@ -18,8 +18,10 @@
   </head>
   <body>
     <h1>The Wizards Crypt</h1>
+    <!--main area to contain game-->
     <div id="game-box">
       <h2>Crypt 1</h2>
+      <!--div to contain game elements-->
       <div id="barrel"></div>
         <div id="pin-one">
           <input type="radio" id="pin-one-input" />
@@ -37,15 +39,18 @@
           <input type="radio" id="pin-five-input" />
         </div>
         <input type="submit" id="submit" value="UNLOCK"/>
-        <div id="lock-piciks" alt="lives left">
-
+        <!--div to show how many attempts are left-->
+        <div id="lock-piciks" alt="lives left"> 
+        
         </div>
+        <!--div to show how many locks have been succesfully completed-->
         <div id = "locks-picked" alt="locks succesfully picked">
           
         </div>
-
       </div>
     </div>
-    
+    <footer class="footer">
+      <p>&copy; 2021 The Wizards Crypt</p>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
