@@ -13,8 +13,19 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /*game container style*/
 #game-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #000000;
     background: url(../images/key-hole.webp) no-repeat center 
     center/cover;
@@ -22,8 +33,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 400px 300px 400px 300px;
+    max-height: 70%;
+    max-width: 70%;
+
     border: 3px solid #000000;
 }
 /*header styles*/
@@ -33,15 +45,47 @@ h1 {
     font-size: 10rem;
     -webkit-text-stroke: 1px whitesmoke;
     margin-bottom: 20px;
-    margin-top: 100px;
-
 }
+
 h2 {
-    display: flex;
     font-size: 3rem;
     -webkit-text-stroke: 1px whitesmoke;
+}
+#level {
+    text-align: center;
     margin-bottom: 20px;
+}
+
+#barrel {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.pin {
+    display: flex;
+    justify-content: center;
+    -webkit-transform: scale(2.5);
+    margin: 20px;
     
+}
+
+#unlock {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    width: 120px;
+    height: 60px;
+    border-width: 2px;
+    border-color: #ffffff;
+    color: aliceblue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #000000;
+    margin: 50px;
 }
 .footer {
     display: flex;

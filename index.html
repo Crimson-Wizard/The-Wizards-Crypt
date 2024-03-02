@@ -18,37 +18,39 @@
   </head>
   <body>
     <h1>The Wizards Crypt</h1>
+    <main class="main">
     <!--main area to contain game-->
-    <div id="game-box">
-      <h2>Crypt 1</h2>
-      <!--div to contain game elements-->
-      <div id="barrel"></div>
-        <div id="pin-one">
-          <input type="radio" id="pin-one-input" />
+      <section id="game-box">
+        <h2 id="level">Crypt 1</h2>
+        <!--div to contain game elements-->
+        <div id="barrel">
+          <div  id="pin-one">
+            <input type="radio" class="pin" id="pin-one-input" />
+          </div>
+          <div id="pin-two">
+            <input type="radio" class="pin" id="pin-two-input" />
+          </div>
+          <div id="pin-three">
+            <input type="radio" class="pin" id="pin-three-input" />
+          </div>
+            <div id="pin-four">
+          <input type="radio" class="pin" id="pin-four-input" />
+          </div>
+          <div id="pin-five">
+            <input type="radio" class="pin" id="pin-five-input" />
+          </div>
         </div>
-        <div id="pin-two">
-          <input type="radio" id="pin-two-input" />
-        </div>
-        <div id="pin-three">
-          <input type="radio" id="pin-three-input" />
-        </div>
-        <div id="pin-four">
-          <input type="radio" id="pin-four-input" />
-        </div>
-        <div id="pin-five">
-          <input type="radio" id="pin-five-input" />
-        </div>
-        <input type="submit" id="submit" value="UNLOCK"/>
+        <input type="submit" id="unlock" value="UNLOCK"/>
         <!--div to show how many attempts are left-->
         <div id="lock-piciks" alt="lives left"> 
-        
-        </div>
-        <!--div to show how many locks have been succesfully completed-->
-        <div id = "locks-picked" alt="locks succesfully picked">
           
         </div>
-      </div>
-    </div>
+          <!--div to show how many locks have been succesfully completed-->
+          <div id = "locks-picked" alt="locks succesfully picked">
+          <div>
+      </section>
+      </main>
+  </section>
     <footer class="footer">
       <p>&copy; 2021 The Wizards Crypt</p>
     </footer>
