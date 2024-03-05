@@ -18,7 +18,21 @@ function generateSequence(level) {
 }
 
 //function to check if the user input matches the sequence
+function checksequence() {
+    let radiobuttons = document.querySelectorAll('.pin"]');
+    let correct = true;
 
+    radiobuttons.forEach(function (radiobutton, index) {
+        if (radiobutton.checked !== sequence[index]) {
+        correct = false;
+    }
+});
+//incomplete code!! reserach how to check if the user input matches the sequence
+    if (correct) {
+        alert('Correct, press unlock to move deep into the crypt!');
+    } else {
+        alert('Lock pick snapped, try again!');
+}
 
 //function to change the level
 

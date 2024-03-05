@@ -66,6 +66,7 @@ h2 {
 }
 
 .pin {
+    accent-color: #07f513;
     display: flex;
     justify-content: center;
     -webkit-transform: scale(2.5);
