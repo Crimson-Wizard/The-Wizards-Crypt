@@ -17,7 +17,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>The Wizards Crypt</h1>
+    <!--header to contain game title-->
+    <header>
+      <h1>The Wizards Crypt</h1>
+    </header>
     <main class="main">
     <!--main area to contain game-->
       <section id="game-box">
@@ -41,13 +44,16 @@
           </div>
         </div>
         <input type="submit" id="unlock" value="UNLOCK"/>
-        <!--div to show how many attempts are left-->
-        <div id="lock-piciks" alt="lives left"> 
-          
-        </div>
-          <!--div to show how many locks have been succesfully completed-->
-          <div id = "locks-picked" alt="locks succesfully picked">
-          <div>
+          <div class="life-locks">
+            <!--div to show how many attempts are left-->
+            <div id="lock-picks" alt="lives left"> 
+            <p>Lock Picks left 3</p> 
+            </div>
+            <!--div to show how many locks have been succesfully completed-->
+            <div id = "locks-picked" alt="locks succesfully picked">
+            <p>Locks Picked 0</p>
+            </div>
+          </div>  
       </section>
       </main>
   </section>
