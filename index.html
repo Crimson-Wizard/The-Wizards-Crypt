@@ -43,34 +43,40 @@
                   Good luck!
                 </p>
         </div>
-        <h2 id="level">Crypt 1</h2>
-          <!--div to contain game elements-->
-        <div id="barrel">
-          <div  id="pin-one">
-            <input type="radio" class="pin" id="pin-one-input" />
-          </div>
-          <div id="pin-two">
-            <input type="radio" class="pin" id="pin-two-input" />
-          </div>
-          <div id="pin-three">
-            <input type="radio" class="pin" id="pin-three-input" />
-          </div>
-            <div id="pin-four">
-          <input type="radio" class="pin" id="pin-four-input" />
-          </div>
-          <div id="pin-five">
-            <input type="radio" class="pin" id="pin-five-input" />
-          </div>
-        </div>
-        <input type="submit" id="unlock" value="UNLOCK"/>
-          <div class="life-locks">
-            <!--div to show how many attempts are left-->
-            <div id="lock-picks" alt="lives left"> 
-            <p>Lock Picks left 3</p> 
+        <div  id = "game-area">
+          <h2 id="level-display">Crypt 1</h2>
+            <!--div to contain game elements-->
+          <div id="barrel">
+            <div  id="pin-one">
+              <input type="radio" class="pin" id="pin-one-input" />
             </div>
-            <!--div to show how many locks have been succesfully completed-->
-            <div id = "locks-picked" alt="locks succesfully picked">
-            <p>Locks Picked 0</p>
+            <div id="pin-two">
+              <input type="radio" class="pin" id="pin-two-input" />
+            </div>
+            <div id="pin-three">
+              <input type="radio" class="pin" id="pin-three-input" />
+            </div>
+            <div id="pin-four">
+              <input type="radio" class="pin" id="pin-four-input" />
+            </div>
+            <div id="pin-five">
+              <input type="radio" class="pin" id="pin-five-input" />
+            </div>
+          </div>
+            <input type="submit" id="unlock" value="UNLOCK"/>
+            <div class="life-locks">
+              <!--div to show how many attempts are left-->
+              <div id="lock-picks" alt="lives left"> 
+                <p id = "life-display">Lock Picks left 3</p> 
+              </div>
+              <!--div to show how many locks have been succesfully completed-->
+              <div id = "locks-picked" alt="locks succesfully picked">
+              <p id = "score-display">Locks Picked 0</p>
+              </div>
+            </div>
+          </div>
+            <div>
+              <p id="game-over-display">Game Over</p>
             </div>
           </div>  
       </section>

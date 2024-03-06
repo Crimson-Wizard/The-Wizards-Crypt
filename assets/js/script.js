@@ -3,31 +3,26 @@ const pinTwo = document.getElementById('pin-two-input');
 const pinThree = document.getElementById('pin-three-input');
 const pinFour = document.getElementById('pin-four-input');
 const pinFive = document.getElementById('pin-five-input');
-const unlockButton = document.getElementById('unlock-button');
-let startButton = document.getElementById('start-button');
-let resetButton = document.getElementById('reset-button');
+let gameIntro = document.getElementById('game-intro');
+let unlockButton = document.getElementById('unlock-button');
+let startButton = document.getElementById('start-game');
+let resetButton = document.getElementById('reset-game');
+let rulesButton = document.getElementById('game-rules');
+let instructionsDisplay = document.getElementById('instructions');
 let levelDisplay = document.getElementById('level-display');
 let scoreDisplay = document.getElementById('score-display');
+let lifeDisplay = document.getElementById('life-display');
 let gameOverDisplay = document.getElementById('game-over-display');
+let level1 = [pinOne, pinTwo, pinThree, pinFour, pinFive];
+let level2 = [pinTwo, pinOne, pinThree, pinFive, pinFour];
+let level3 = [pinThree, pinFive, pinTwo, pinFour, pinOne];
+let level4 = [pinFour, pinThree, pinFive, pinOne, pinTwo];
+let level5 = [pinFive, pinFour, pinOne, pinTwo, pinThree];
+let level6 = [pinOne, pinThree, pinFour, pinTwo, pinFive];
 
-
-
-
-
-
-
-//sequence to generate each level
-let sequence = {
-    level1: [pin-one-input, pin-two-input, pin-three-input, pin-four-input, pin-five-input],
-    level2: [pin-two-input, pin-one-input, pin-three-input, pin-five-input, pin-four-input],
-    level3: [pin-three-input, pin-five-input, pin-two-input, pin-four-input, pin-one-input],
-    level4: [pin-four-input, pin-three-input, pin-five-input, pin-one-input, pin-two-input],
-    level5: [pin-five-input, pin-four-input, pin-one-input, pin-two-input, pin-three-input],
-    level6: [pin-one-input, pin-three-input, pin-four-input, pin-two-input, pin-five-input],
-}
 
 //function to generate the sequence for each level
-function generateSequence(level) {
+/*function generateSequence(level) {
     let sequence = [];
     for (let i = 0; i < level.length; i++) {
         sequence.push(level[i]);
@@ -61,6 +56,4 @@ function checksequence() {
 //function to display the game over screen
 
 //function to display the win screen
-
-
-
+*/
