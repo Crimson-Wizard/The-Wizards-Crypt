@@ -1,3 +1,21 @@
+const pinOne = document.getElementById('pin-one-input');
+const pinTwo = document.getElementById('pin-two-input');
+const pinThree = document.getElementById('pin-three-input');
+const pinFour = document.getElementById('pin-four-input');
+const pinFive = document.getElementById('pin-five-input');
+const unlockButton = document.getElementById('unlock-button');
+let startButton = document.getElementById('start-button');
+let resetButton = document.getElementById('reset-button');
+let levelDisplay = document.getElementById('level-display');
+let scoreDisplay = document.getElementById('score-display');
+let gameOverDisplay = document.getElementById('game-over-display');
+
+
+
+
+
+
+
 //sequence to generate each level
 let sequence = {
     level1: [pin-one-input, pin-two-input, pin-three-input, pin-four-input, pin-five-input],

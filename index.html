@@ -24,8 +24,27 @@
     <main class="main">
     <!--main area to contain game-->
       <section id="game-box">
+        <div class="game-intro">
+          <h2>Welcome to the Wizards Crypt</h2>
+          <!--button to start game-->
+          <button data-type="start-game" id="start">Start</button>
+          <!--button to reset game-->
+          <button data-type="reset-game" id="reset">Reset</button>
+          <!--button to show game rules-->
+          <button data-type="game-rules" id="rules">Rules</button>
+                <p id="instructions">
+                  Steal the wizards spellbook by unlocking the crypt doors. 
+                  Select the pin buttons in a sequnece to unlock the door.
+                  You have 5 lock picks to unlock the door.
+                  For every incorect sequence yopu will break a lock pick,
+                  So choose wisely for if you run out of picks its game over.
+                  You will gain an additional lock pick for every door you unlock.
+                  Once all pins are correct unlock the crypt and move onto the next level.
+                  Good luck!
+                </p>
+        </div>
         <h2 id="level">Crypt 1</h2>
-        <!--div to contain game elements-->
+          <!--div to contain game elements-->
         <div id="barrel">
           <div  id="pin-one">
             <input type="radio" class="pin" id="pin-one-input" />
