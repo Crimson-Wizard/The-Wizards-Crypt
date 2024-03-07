@@ -28,10 +28,7 @@
           <h2>Welcome to the Wizards Crypt</h2>
           <!--button to start game-->
           <button data-type="start-game" id="start">Start</button>
-          <!--button to reset game-->
-          <button data-type="reset-game" id="reset">Reset</button>
-          <!--button to show game rules-->
-          <button data-type="game-rules" id="rules">Rules</button>
+              <h2>Game Rules</h2>
                 <p id="instructions">
                   Steal the wizards spellbook by unlocking the crypt doors. 
                   Select the pin buttons in a sequnece to unlock the door.
@@ -43,8 +40,9 @@
                   Good luck!
                 </p>
         </div>
-        <div  id = "game-area">
-          <h2 id="level-display">Crypt 1</h2>
+        <!--game area hidden till start games selected-->
+        <div id = "game-area" style="display: none;">
+          <h2 id="level-display">Crypt<div id="level-display-counter">1</div></h2>
             <!--div to contain game elements-->
           <div id="barrel">
             <div  id="pin-one">
@@ -67,16 +65,18 @@
             <div class="life-locks">
               <!--div to show how many attempts are left-->
               <div id="lock-picks" alt="lives left"> 
-                <p id = "life-display">Lock Picks left 3</p> 
+                <p id = "life-display">Lock Picks Left <div id = "life-display-counter">5</div></p> 
               </div>
               <!--div to show how many locks have been succesfully completed-->
               <div id = "locks-picked" alt="locks succesfully picked">
-              <p id = "score-display">Locks Picked 0</p>
+              <p id = "score-display">Locks Picked <div id = "score-display-counter">0</div></p>
               </div>
             </div>
           </div>
-            <div>
+            <div class = "game-over" style="display: none;">
               <p id="game-over-display">Game Over</p>
+              <!--button to reset game-->
+              <button data-type="reset-game" id="reset">Reset</button>
             </div>
           </div>  
       </section>
