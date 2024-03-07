@@ -22,23 +22,23 @@ let level5 = [pinFive, pinFour, pinOne, pinTwo, pinThree];
 let level6 = [pinOne, pinThree, pinFour, pinTwo, pinFive];
 
 // function to hide menu and display game
-startButton.addEventListener('click', (startGame));
+startButton.addEventListener('click', startGame);
 
 function startGame() {
     gameIntro.style.display = 'none';
     gameArea.style.display = 'block';
-};
+}
 
 //function to generate the sequence for each level
 
 //function to check if the user input matches the sequence
 
 //incomplete code!! reserach how to check if the user input matches the sequence
-    if (correct) {
-        alert('Correct, press unlock to move deep into the crypt!');
-    } else {
-        alert('Lock pick snapped, try again!');
-}
+  // if (correct) {
+     //   alert('Correct, press unlock to move deep into the crypt!');
+   // } else {
+   //     alert('Lock pick snapped, try again!');
+//}
 
 //function to change the level
 
