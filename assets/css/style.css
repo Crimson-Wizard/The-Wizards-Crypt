@@ -184,6 +184,7 @@ h2 {
 #unlock {
     display: flex;
     justify-content: center;
+    
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     width: 120px;
@@ -197,6 +198,11 @@ h2 {
     border-bottom-right-radius: 5px;
     background-color:  #72572f ;
     margin: 20px;
+}
+
+#unlock-center {
+    display: flex;
+    justify-content: center;
 }
 .life-locks {
     display: flex;

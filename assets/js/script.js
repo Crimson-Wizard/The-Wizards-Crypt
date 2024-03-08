@@ -22,6 +22,7 @@ let level5 = [pinFive, pinFour, pinOne, pinTwo, pinThree];
 let level6 = [pinOne, pinThree, pinFour, pinTwo, pinFive];
 
 // function to hide menu and display game
+
 // Ensure DOM content is loaded
 document.addEventListener('DOMContentLoaded', function() {
   // Get references to DOM elements
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
       gameArea.style.display = 'block';
   }
 });
+
 //function to generate the sequence for each level
 
 //function to check if the user input matches the sequence
