@@ -22,13 +22,22 @@ let level5 = [pinFive, pinFour, pinOne, pinTwo, pinThree];
 let level6 = [pinOne, pinThree, pinFour, pinTwo, pinFive];
 
 // function to hide menu and display game
-startButton.addEventListener('click', startGame);
+// Ensure DOM content is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Get references to DOM elements
+  const gameArea = document.getElementById('game-area');
+  const startButton = document.getElementById('start');
 
-function startGame() {
-    gameIntro.style.display = 'none';
-    gameArea.style.display = 'block';
-}
+  // Add event listener to start button
+  startButton.addEventListener('click', startGame);
 
+  // Function to start the game
+  function startGame() {
+      // Hide game intro and display game area
+      gameIntro[0].style.display = 'none'; 
+      gameArea.style.display = 'block';
+  }
+});
 //function to generate the sequence for each level
 
 //function to check if the user input matches the sequence
