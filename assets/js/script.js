@@ -158,12 +158,13 @@ function checkInput(userInput, sequence) {
   return true;
 };
 
-//function to change the level
-
-//function to display the level
-
-//function to display the score
-
+//function to restart the game
+resetButton.addEventListener('click', function() {
+  loadsequence(level1);
+  currentLife = 5;
+  currentLevel = 1;
+  currentScore = 0;
+});
 //function to display the game over screen
 
 //function to display the win screen
