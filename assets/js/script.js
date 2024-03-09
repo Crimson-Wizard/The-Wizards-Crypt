@@ -18,7 +18,14 @@ let level2 = [pinTwo, pinOne, pinThree, pinFive, pinFour];
 let level3 = [pinThree, pinFive, pinTwo, pinFour, pinOne];
 let level4 = [pinFour, pinThree, pinFive, pinOne, pinTwo];
 let level5 = [pinFive, pinFour, pinOne, pinTwo, pinThree];
-let level6 = [pinOne, pinThree, pinFour, pinTwo, pinFive];
+let level6 = [pinOne, pinThree, pinFour, pinTwo, pinFive]; 
+//araay to store the sequence for each level but does this do the same as the other
+const level1Sequence = level1(1);
+const level2Sequence = level2(2);
+const level3Sequence = level3(3);
+const level4Sequence = level4(4);
+const level5Sequence = level5(5);
+const level6Sequence = level6(6);
 
 //sequence to iterate throu level
 const sequence = [level1, level2, level3, level4, level5, level6];
@@ -58,9 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   }
 // function to load the sequence for each level 
-  function loadsequence(level) {
+  function loadsequence() {
     const sequence = [level1, level2, level3, level4, level5, level6];
-    return sequence[level - 1];
+    return sequence[level1 - 1];
   }
       pins.forEach(pin => {
         pin.checked = false;
