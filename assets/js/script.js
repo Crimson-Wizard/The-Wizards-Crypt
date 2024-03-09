@@ -7,9 +7,9 @@ const pins = document.querySelectorAll('.pin');
 const gameBox = document.getElementById('game-box');
 const gameIntro = document.getElementById('game-intro');
 const gameArea = document.getElementById('game-area');
-let unlockButton = document.getElementById('unlock-button');
+let unlockButton = document.getElementById('btn-unlock');
 let startButton = document.getElementById('start');
-let resetButton = document.getElementById('reset');
+let resetButton = document.getElementById('reset-center');
 let instructionsDisplay = document.getElementById('instructions');
 let levelDisplay = document.getElementById('level-display-counter');
 let scoreDisplay = document.getElementById('score-display-counter');
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const gameArea = document.getElementById('game-area');
   const startButton = document.getElementById('start');
   const gameIntro = document.getElementById('game-intro'); 
+  const resetButton = document.getElementById('reset-center');
 
   // Add event listener to start button
 
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     gameIntro.style.display = 'none';
     startButton.style.display = 'none';
     gameArea.style.display = 'block';
+    resetButton.style.display = 'block';
     loadsequence(level1);
 
   }
@@ -80,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     }
-  }
-);
+    )
+};
 
 
 
@@ -100,7 +102,11 @@ let userInput = [];
 //});
 //function to check if the user input matches the sequence
 // still need to add loss of pin and life if wrong  if coirrect add to score
-document.addEventListener('DOMContentLoaded', function() {
+  // Get references to DOM elements
+  const unlockButton = document.getElementById('btn-unlock');
+
+
+  // Add event listener to unlock button
 unlockButton.addEventListener('click', function() {
   const isCorrect = checkInput(userInput, sequence);
   if (isCorrect) {

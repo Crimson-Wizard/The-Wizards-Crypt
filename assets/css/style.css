@@ -181,10 +181,9 @@ h2 {
     
 }
 
-#unlock {
+#btn-unlock {
     display: flex;
     justify-content: center;
-    
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     width: 120px;
@@ -203,6 +202,29 @@ h2 {
 #unlock-center {
     display: flex;
     justify-content: center;
+}
+
+#reset-center{
+    display: flex;
+    justify-content: center;
+}
+
+#btn-reset {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    width: 120px;
+    height: 60px;
+    border-width: 2px;
+    border-color: #ffffff;
+    color: aliceblue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color:  #72572f ;
+    margin: 20px;
 }
 .life-locks {
     display: flex;

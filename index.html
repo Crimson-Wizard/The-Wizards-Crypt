@@ -72,8 +72,7 @@
             </div>
           </div>
           <div id="unlock-center">
-            <input type="submit" id="unlock" value="UNLOCK"/>
-          </div>
+            <input type="submit" id="btn-unlock" value="UNLOCK"/>
             <div class="life-locks">
               <!--div to show how many attempts are left-->
               <div id="lock-picks" alt="lives left"> 
@@ -87,8 +86,7 @@
           </div>
             <div class = "game-over" style="display: none;">
               <p id="game-over-display">Game Over</p>
-              <!--button to reset game-->
-              <button data-type="reset-game" id="reset">Reset</button>
+              
             </div>
           </div>  
           
@@ -97,6 +95,10 @@
         <!--button to start game-->
         <button data-type="start-game" id="start">Start</button>
         </div>
+      </div>
+      <div style="display: none;" id = reset-center>
+        <input type="submit" id="btn-reset" value="RESTART"/>
+      </div>
       </main>
   </section>
     <footer class="footer">
