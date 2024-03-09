@@ -11,9 +11,6 @@ let unlockButton = document.getElementById('unlock');
 let startButton = document.getElementById('start');
 let resetButton = document.getElementById('reset-center');
 let instructionsDisplay = document.getElementById('instructions');
-let levelDisplay = document.getElementById('level-display-counter');
-let scoreDisplay = document.getElementById('score-display-counter');
-let lifeDisplay = document.getElementById('life-display-counter');
 let gameOverDisplay = document.getElementById('game-over-display');
 const barrel = document.getElementById('barrel');
 let level1 = [pinOne, pinTwo, pinThree, pinFour, pinFive];
@@ -22,6 +19,19 @@ let level3 = [pinThree, pinFive, pinTwo, pinFour, pinOne];
 let level4 = [pinFour, pinThree, pinFive, pinOne, pinTwo];
 let level5 = [pinFive, pinFour, pinOne, pinTwo, pinThree];
 let level6 = [pinOne, pinThree, pinFour, pinTwo, pinFive];
+
+//sequence to iterate throu level
+const sequence = [level1, level2, level3, level4, level5, level6];
+//to keep track of the life counter
+let lifeDisplay = document.getElementById('life-display-counter');
+let currentLife = parseInt(lifeDisplay.innerHTML);
+//to keep track of the level counter
+let levelDisplay = document.getElementById('level-display-counter');
+let currentLevel = parseInt(levelDisplay.innerHTML);
+//to keep track of the score counter
+let scoreDisplay = document.getElementById('score-display-counter');
+let currentScore = parseInt(scoreDisplay.innerHTML);
+
 
 // function to hide menu and display game
 
@@ -32,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const startButton = document.getElementById('start');
   const gameIntro = document.getElementById('game-intro'); 
   const resetButton = document.getElementById('reset-center');
+  let currentLife = parseInt(lifeDisplay.innerHTML);
 
   // Add event listener to start button
 
@@ -43,36 +54,47 @@ document.addEventListener('DOMContentLoaded', function() {
     startButton.style.display = 'none';
     gameArea.style.display = 'block';
     resetButton.style.display = 'block';
-    loadsequence(level1);
+    loadsequence();
 
   }
 // function to load the sequence for each level 
   function loadsequence(level) {
-    const barrel = document.getElementById('barrel');
-    barrel.innerHTML = '';
-    level.forEach(pin => {
+    const sequence = [level1, level2, level3, level4, level5, level6];
+    return sequence[level - 1];
+  }
+      pins.forEach(pin => {
+        pin.checked = false;
+     }) //set state of raido button unchecked 
+    let currentGuess = 0;
+    sequence.forEach(pin => {
       // Add event listener to each pin
       pin.addEventListener('click', function() {
-        if (pin.id === sequence[index]) {
-          index++;
-          barrel.innerHTML += pin.id;
-          if (index === sequence.length) {
-            index = 0;
+
+        if (pin.id === level[currentGuess].id) {
+          currentGuess++;
+          if (currentGuess === sequence.length) {
+            currentGuess = 0;
             //increase life
-            lifeDisplay.innerHTML = lifeDisplay.innerHTML + 1;
+            currentLife++;  
+            lifeDisplay.innerHTML = currentLife;
             //change level
+            currentLevel++;
+            levelDisplay.innerHTML = currentLevel;
             loadsequence(level2);
             //display level
-            levelDisplay.innerHTML = levelDisplay.innerHTML + 1;
+            levelDisplay.innerHTML = currentLevel;
             //display score
-            scoreDisplay.innerHTML = scoreDisplay.innerHTML + 1;
+            currentScore++;
+            scoreDisplay.innerHTML = currentScore;
           }
         }else {
           //decrease life
-          lifeDisplay.innerHTML = lifeDisplay.innerHTML - 1;
-          // clear previuos input
-          barrel.innerHTML = '';
-          //reset index
+          currentLife--;
+          //set state of raido buttons unchecked
+          pins.forEach(pin => {
+            pin.checked = false;
+          }) 
+          //reset index 
           index = 0;
 
           alert('Incorrect sequence. Please try again.');
@@ -83,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
     )
-};
+});
 
 
 
@@ -103,7 +125,7 @@ let userInput = [];
 //function to check if the user input matches the sequence
 // still need to add loss of pin and life if wrong  if coirrect add to score
   // Get references to DOM elements
-  const unlockButton = document.getElementById('btn-unlock');
+
 
 
   // Add event listener to unlock button
@@ -133,7 +155,7 @@ function checkInput(userInput, sequence) {
 
   alert('You unlocked the barrel!');
   return true;
-}});
+};
 
 //function to change the level
 
