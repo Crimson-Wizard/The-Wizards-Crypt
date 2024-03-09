@@ -107,13 +107,14 @@ document.addEventListener('DOMContentLoaded', function() {
     )
 });
 
-
-
-//function to generate the sequence for each level
-  //if (level === 1) {
-    //let sequence = [0, 1, 2, 3, 4,];
 //function for user input
 let userInput = [];
+
+pins.forEach(pin => {
+  pin.addEventListener('click', function() {
+    userInput.push(pin.id);
+  });
+});
 
 // Listen for user input events on each pin
 //pins.forEach(pin => {
