@@ -161,10 +161,13 @@ function checkInput(userInput, sequence) {
 //function to restart the game
 resetButton.addEventListener('click', function() {
   loadsequence(level1);
-  currentLife = 5;
-  currentLevel = 1;
-  currentScore = 0;
-});
+  lifeDisplay.innerHTML = 5;
+  levelDisplay.innerHTML = 1;
+  scoreDisplay.innerHTML = 0;
+  pins.forEach(pin => {
+    pin.checked = false;
+  });
+  });
 //function to display the game over screen
 
 //function to display the win screen
