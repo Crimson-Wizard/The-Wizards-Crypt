@@ -44,37 +44,60 @@ document.addEventListener('DOMContentLoaded', function() {
     loadsequence(level1);
 
   }
-
+// function to load the sequence for each level 
   function loadsequence(level) {
     const barrel = document.getElementById('barrel');
     barrel.innerHTML = '';
     level.forEach(pin => {
-      barrel.appendChild(pin);
+      // Add event listener to each pin
+      pin.addEventListener('click', function() {
+        if (pin.id === sequence[index]) {
+          index++;
+          barrel.innerHTML += pin.id;
+          if (index === sequence.length) {
+            index = 0;
+            //increase life
+            lifeDisplay.innerHTML = lifeDisplay.innerHTML + 1;
+            //change level
+            loadsequence(level2);
+            //display level
+            levelDisplay.innerHTML = levelDisplay.innerHTML + 1;
+            //display score
+            scoreDisplay.innerHTML = scoreDisplay.innerHTML + 1;
+          }
+        }else {
+          //decrease life
+          lifeDisplay.innerHTML = lifeDisplay.innerHTML - 1;
+          // clear previuos input
+          barrel.innerHTML = '';
+          //reset index
+          index = 0;
+
+          alert('Incorrect sequence. Please try again.');
+          
+        }
+
     });
 
     }
   }
 );
 
-// event listeners for pin inputs
-//pins.forEach(pin => {
-  //pin.addEventListener('click', function() {
-      // Your event handling logic here
-  //});
-//});
+
+
 //function to generate the sequence for each level
-  if (level === 1) {
-    let sequence = [0, 1, 2, 3, 4,];
+  //if (level === 1) {
+    //let sequence = [0, 1, 2, 3, 4,];
 //function for user input
 let userInput = [];
 
 // Listen for user input events on each pin
-pins.forEach(pin => {
-    pin.addEventListener('click', function() {
+//pins.forEach(pin => {
+   // pin.addEventListener('click', function() {
         // When a pin is clicked, store its value in the userInput array
-        userInput.push(pin.id);  
-    });
-});
+     //   userInput.push(pin.id);  
+    //});
+//});
 //function to check if the user input matches the sequence
 // still need to add loss of pin and life if wrong  if coirrect add to score
 document.addEventListener('DOMContentLoaded', function() {
