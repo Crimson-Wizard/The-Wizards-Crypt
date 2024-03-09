@@ -22,13 +22,11 @@
       <h1>The Wizards Crypt</h1>
     </header>
     <main class="main">
-      <div id = "start-center">
-        <!--button to start game-->
-        <button data-type="start-game" id="start">Start</button>
-        </div>
+    
     <!--main area to contain game-->
       <section id="game-box">
-        <div class="game-intro">
+      <!--section to contain game intro and rules-->
+        <div id="game-intro">
           <h2>Welcome to the Wizards Crypt</h2>
           <div id="rule-box-center">
           <article class ="rule-box">
@@ -53,7 +51,7 @@
         </div>
         <!--game area hidden till start games selected-->
         
-        <div  id = "game-area">
+        <div style="display: none;"  id = "game-area">
           <h2 id="level-display">Crypt<div id="level-display-counter">1</div></h2>
             <!--div to contain game elements-->
           <div id="barrel">
@@ -79,11 +77,11 @@
             <div class="life-locks">
               <!--div to show how many attempts are left-->
               <div id="lock-picks" alt="lives left"> 
-                <p id = "life-display">Lock Picks Left <div id = "life-display-counter">5</div></p> 
+                <p id = "life-display">Lock Picks Left=<div id = "life-display-counter">5</div></p> 
               </div>
               <!--div to show how many locks have been succesfully completed-->
               <div id = "locks-picked" alt="locks succesfully picked">
-              <p id = "score-display">Locks Picked <div id = "score-display-counter">0</div></p>
+              <p id = "score-display">Locks Picked=<div id = "score-display-counter">0</div></p>
               </div>
             </div>
           </div>
@@ -93,7 +91,12 @@
               <button data-type="reset-game" id="reset">Reset</button>
             </div>
           </div>  
+          
       </section>
+      <div id = "start-center">
+        <!--button to start game-->
+        <button data-type="start-game" id="start">Start</button>
+        </div>
       </main>
   </section>
     <footer class="footer">
