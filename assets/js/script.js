@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
   //});
 //});
 //function to generate the sequence for each level
-  //if (level === 1) {
-   // let sequence = [0, 1, 2, 3, 4,];
+  if (level === 1) {
+    let sequence = [0, 1, 2, 3, 4,];
 //function for user input
 let userInput = [];
 
@@ -72,7 +72,7 @@ let userInput = [];
 pins.forEach(pin => {
     pin.addEventListener('click', function() {
         // When a pin is clicked, store its value in the userInput array
-        userInput.push(pin.id); // You can adjust this based on how you want to represent the pin
+        userInput.push(pin.id);  
     });
 });
 //function to check if the user input matches the sequence
