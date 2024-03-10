@@ -163,9 +163,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+
 #barrel {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 150px;
     margin-bottom: 20px;
     margin-left: 150px;
@@ -173,11 +174,11 @@ h2 {
 }
 
 .pin {
-    accent-color: #07f513;
-    display: flex;
-    justify-content: center;
-    -webkit-transform: scale(2.5);
-    margin: 20px;
+    border: 1px solid black;
+    height: 30px;
+    background-color: white;
+    width: 30px;
+    border-radius: 50%;
     
 }
 
