@@ -10,6 +10,7 @@ const gameArea = document.getElementById('game-area');
 let unlockButton = document.getElementById('unlock');
 let startButton = document.getElementById('start');
 let resetButton = document.getElementById('reset-center');
+let clearButton = document.getElementById('clear');
 let instructionsDisplay = document.getElementById('instructions');
 let gameOverDisplay = document.getElementById('game-over-display');
 //to keep track of the life counter
@@ -21,18 +22,25 @@ let currentLevel = parseInt(levelDisplay.innerHTML);
 //to keep track of the score counter
 let scoreDisplay = document.getElementById('score-display-counter');
 let currentScore = parseInt(scoreDisplay.innerHTML);
-const defaultSequence = [0, 1, 2, 3, 4];
-const defaultCombo = [0, 1, 2, 3, 4];
-let guessCombo = [];
-let successCombo = [];
+let listenersAttached = false;
+
+
+// Ensure DOM content is loaded
+
+  
+  const defaultCombo = [0, 1, 2, 3, 4];
+  let guessCombo = [];
+  let successCombo = []; 
+  
 
   console.log(pins);
   // function to hide menu and display game
-  // Ensure DOM content is loaded
   document.addEventListener('DOMContentLoaded', function() {
-    
+
       startButton.addEventListener('click', startGame);
       unlockButton.addEventListener('click', unlockDoor);
+      clearButton.addEventListener('click', clearButtons);
+
   });
   function activateLock() {
       pins.forEach(lockPin => {
@@ -59,16 +67,25 @@ let successCombo = [];
       addToGuessCombo(index);
       let isCorrect = index == successCombo[guessCombo.length - 1];
       console.log(index, isCorrect);
-  
+
     if (index == successCombo[guessCombo.length - 1]) {
       updateLockDisplay(index, true);
     } else {
 
       updateLockDisplay(index,false);
-      
+      currentLife -= 1;
+    
+
     }
   }     
-  
+
+  //function to decrease life
+  function decreaseLife() {
+    if (currentLife === 0) {
+      gameOverDisplay.innerHTML = 'Game Over';
+    
+    }
+  }
 
   function addToGuessCombo(index) {
       console.log(index);
@@ -113,13 +130,35 @@ let successCombo = [];
         levelDisplay.innerHTML = currentLevel.toString();
         scoreDisplay.innerHTML = currentScore.toString();
 
+        resetGame();
 
-        
       } else {
-          messageElement.textContent = 'You have failed to unlock the door';
+        loseLife();
+        resetGame();
       }
-      resetGame();
+      
   }
+
+
+  //function for clear button
+  
+  function clearButtons() {
+    guessCombo = [];
+    activateLock();
+    pins.forEach(pin => {
+      pin.style.backgroundColor = 'white';
+
+      if (!listenersAttached) {
+        pins.forEach((lockPin, index) => {
+            lockPin.addEventListener('click', () => noteUserGuess(index));
+        });
+        listenersAttached = true; // Prevent future attachment
+    }
+  });
+  
+
+};
+
 
   function resetGame() {
       guessCombo = [];
@@ -152,3 +191,16 @@ resetButton.addEventListener('click', function() {
   });
 
 }); 
+
+//funtion for game over
+function loseLife() {
+  if (currentLife > 0) {
+    currentLife -= 1;
+    lifeDisplay.innerHTML = currentLife.toString();
+
+    if (currentLife === 0) {
+      console.log("Game Over!")
+      messageElement.textContent = "Game Over";
+    }
+  }
+}
