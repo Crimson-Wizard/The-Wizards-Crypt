@@ -73,20 +73,23 @@ let listenersAttached = false;
     } else {
 
       updateLockDisplay(index,false);
-      currentLife -= 1;
+      
     
 
     }
   }     
 
-  //function to decrease life
-  function decreaseLife() {
-    if (currentLife === 0) {
-      gameOverDisplay.innerHTML = 'Game Over';
-    
+  //function to deactivate event listeners
+  function activateLock() {
+    if (!listenersAttached) {
+        pins.forEach((lockPin, index) => {
+            lockPin.addEventListener('click', () => noteUserGuess(index));
+        });
+        listenersAttached = true; // Prevent future attachment
     }
-  }
+}
 
+  
   function addToGuessCombo(index) {
       console.log(index);
       guessCombo.push(index);
@@ -121,7 +124,6 @@ let listenersAttached = false;
       if (guessCombo.toString() === successCombo.toString()) {
           messageElement.textContent = 'You have unlocked the door';
 
-        currentLife += 1;
         currentLevel += 1;
         currentScore += 1;
 
@@ -133,27 +135,22 @@ let listenersAttached = false;
         resetGame();
 
       } else {
-        loseLife();
+        
         resetGame();
       }
       
   }
 
 
-  //function for clear button
+  //function for clearing button
   
   function clearButtons() {
     guessCombo = [];
+    currentLife += 1;
     activateLock();
     pins.forEach(pin => {
       pin.style.backgroundColor = 'white';
 
-      if (!listenersAttached) {
-        pins.forEach((lockPin, index) => {
-            lockPin.addEventListener('click', () => noteUserGuess(index));
-        });
-        listenersAttached = true; // Prevent future attachment
-    }
   });
   
 
@@ -192,15 +189,3 @@ resetButton.addEventListener('click', function() {
 
 }); 
 
-//funtion for game over
-function loseLife() {
-  if (currentLife > 0) {
-    currentLife -= 1;
-    lifeDisplay.innerHTML = currentLife.toString();
-
-    if (currentLife === 0) {
-      console.log("Game Over!")
-      messageElement.textContent = "Game Over";
-    }
-  }
-}
