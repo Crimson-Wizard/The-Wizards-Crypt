@@ -63,8 +63,7 @@ const defaultSequence = [0, 1, 2, 3, 4];
       addToGuessCombo(index);
       let isCorrect = index == successCombo[guessCombo.length - 1];
       console.log(index, isCorrect);
-  }
-
+  
     if (index == successCombo[guessCombo.length - 1]) {
       updateLockDisplay(index, true);
     } else {
@@ -72,7 +71,7 @@ const defaultSequence = [0, 1, 2, 3, 4];
       updateLockDisplay(index,false);
       
     }
-      
+  }     
   
 
   function addToGuessCombo(index) {
@@ -82,7 +81,7 @@ const defaultSequence = [0, 1, 2, 3, 4];
 
   }
 
-  function updateLockDisplay(index) {
+  function updateLockDisplay(index, isCorrect) {
     if(isCorrect) {
       pins[index].style.backgroundColor = 'green';
     } else {
@@ -99,10 +98,10 @@ const defaultSequence = [0, 1, 2, 3, 4];
       return combination;
   }
 
-  let messageElement = document.getElementById('message');
+  let messageElement = document.getElementById('message-box');
 
   function unlockDoor() {
-      if (userInput.length !== 5) {
+      if (guessCombo.length !== 5) {
           messageElement.textContent = 'You must pick all the locks';
           return;
       }
