@@ -22,17 +22,13 @@ let currentLevel = parseInt(levelDisplay.innerHTML);
 let scoreDisplay = document.getElementById('score-display-counter');
 let currentScore = parseInt(scoreDisplay.innerHTML);
 const defaultSequence = [0, 1, 2, 3, 4];
-
-
-// Ensure DOM content is loaded
-
-  // my code
-  const defaultCombo = [0, 1, 2, 3, 4];
-  let guessCombo = [];
-  let successCombo = [];
+const defaultCombo = [0, 1, 2, 3, 4];
+let guessCombo = [];
+let successCombo = [];
 
   console.log(pins);
   // function to hide menu and display game
+  // Ensure DOM content is loaded
   document.addEventListener('DOMContentLoaded', function() {
     
       startButton.addEventListener('click', startGame);
