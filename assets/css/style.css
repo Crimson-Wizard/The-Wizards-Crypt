@@ -272,14 +272,14 @@ h2 {
     background-color:  #72572f ;
     margin: 20px;
 }
-.life-locks {
+.wrong-display {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 5px;
     -webkit-text-stroke: 1px whitesmoke;
 }
-#lock-picks {
+#wrong-guess {
     display: flex;
     color: #000000;
     font-size: 2em;

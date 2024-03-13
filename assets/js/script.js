@@ -14,8 +14,8 @@ let clearButton = document.getElementById('clear');
 let instructionsDisplay = document.getElementById('instructions');
 let gameOverDisplay = document.getElementById('game-over-display');
 //to keep track of the life counter
-let lifeDisplay = document.getElementById('life-display-counter');
-let currentLife = parseInt(lifeDisplay.innerHTML);
+let wrongGuess = document.getElementById('wrong-guess-number');
+let currentLife = parseInt(wrongGuess.innerHTML);
 //to keep track of the level counter
 let levelDisplay = document.getElementById('level-display-counter');
 let currentLevel = parseInt(levelDisplay.innerHTML);
@@ -134,7 +134,7 @@ const messageElement = document.getElementById('message-box');
         currentScore += 1;
 
 
-        lifeDisplay.innerHTML = currentLife.toString();
+        wrongGuess.innerHTML = currentLife.toString();
         levelDisplay.innerHTML = currentLevel.toString();
         scoreDisplay.innerHTML = currentScore.toString();
 
@@ -182,8 +182,8 @@ resetButton.addEventListener('click', function() {
   startButton.style.display = 'none'; // Show the start button to allow starting a new game
   resetButton.style.display = 'block'; // Hide reset button until the game starts again
 
-  // Reset counters
-  lifeDisplay.innerHTML = '5'; // Reset life counter to initial value
+  // Restart counters
+  wrongGuess.innerHTML = '0'; // Reset life counter to initial value
   levelDisplay.innerHTML = '1'; // Reset level counter to initial value
   scoreDisplay.innerHTML = '0'; // Reset score counter to initial value
 
