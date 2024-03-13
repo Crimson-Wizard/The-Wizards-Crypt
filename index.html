@@ -26,7 +26,7 @@
     <!--main area to contain game-->
       <section id="game-box">
       <!--section to contain game intro and rules-->
-        <div id="game-intro">
+        <section id="game-intro">
           <h2>Welcome to the Wizards Crypt</h2>
           <div id="rule-box-center">
           <article class ="rule-box">
@@ -35,24 +35,25 @@
                   
                   <li> Select the lock pin buttons in a sequnece to unlock the door.
                   </li>
-                  <li> You have 5 lock picks to unlock the door.
+                  <li> The pin will display green if its correct and red if its wrong.
                   </li>
-                  <li>  For every incorect sequence you will break a lock pick,
-                  So choose wisely for if you run out of picks its game over.
+                  <li>  For every incorect sequence you will get a wrong guess added to the counter,
                   </li>
-                  <li> You will gain an additional lock pick for every door you unlock.
-                  </li> 
-                  <li>Once all pins are correct unlock the crypt and move onto the next level.</li>
-                  Good luck!
+                  <li> If you select the wrong button you can clear them by pressing reset.
+                  </li>
+                  <li>Once all pins are correct press unlock to move onto the next level.
+                  </li>
+                  <li>Good luck!
+                  </li>
                 </ul>
               </article>
             </div>
-        </div>
+        </section>
         <!--game area hidden till start games selected-->
         
-        <div style="display: none;"  id = "game-area">
+        <section style="display: none;"  id = "game-area">
           <h2 id="level-display">Crypt-<div id="level-display-counter">1</div></h2>
-          <div style="display: none;" id="message-box"></div>
+          <div id="message-box"></div>
             <!--div to contain game elements-->
           <div id="barrel">
             <div class="pin" id="pin-one-input" data-index="0"></div>
@@ -63,38 +64,31 @@
           </div>
           <div id="buttons-center">
             <div id="clear-button">
-              <input class="btn" type="submit" id="clear" value="CLEAR"/>
+              <input class="btn" type="submit" id="clear" value="RESET"/>
             </div>
             <div id="unlock">
               <input type="submit" id="unlock" value="UNLOCK"/>
             </div>
           </div>
-            <div class="life-locks">
-              <!--div to show how many attempts are left-->
-              <div id="lock-picks" alt="lives left"> 
-                <p id = "life-display">Wrong Guess=<div id = "life-display-counter">0</div></p> 
-              </div>
-              <!--div to show how many locks have been succesfully completed-->
-              <div id = "locks-picked" alt="locks succesfully picked">
+          <div class="life-locks">
+            <!--div to show how many wrong guesses-->
+            <div id="lock-picks" alt="This displays how many wrong guesses you have made"> 
+              <p id = "life-display">Wrong Guess=<div id = "life-display-counter">0</div></p> 
+            </div>
+            <!--div to show how many locks have been succesfully completed-->
+            <div id = "locks-picked" alt="locks succesfully picked">
               <p id = "score-display">Locks Picked=<div id = "score-display-counter">0</div></p>
-              </div>
             </div>
           </div>
-            <div class = "game-over" style="display: none;">
-              <p id="game-over-display">Game Over</p>
-              
-            </div>
-          </div>  
-          
+          </div>
       </section>
-      <div id = "start-center">
+      <nav id = "start-center">
         <!--button to start game-->
         <button data-type="start-game" id="start">Start</button>
-        </div>
-      </div>
-      <div style="display: none;" id = reset-center>
+      </nav>
+      <nav style="display: none;" id = reset-center>
         <input type="submit" id="reset" value="RESTART"/>
-      </div>
+      </nav>
       </main>
   </section>
     <footer class="footer">

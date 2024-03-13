@@ -80,6 +80,9 @@ h2 {
     display: flex;
     justify-content: center;
 }
+#message-box {
+    text-align: center;
+}
 
 #reset {
     display: flex;

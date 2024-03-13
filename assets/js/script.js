@@ -23,6 +23,7 @@ let currentLevel = parseInt(levelDisplay.innerHTML);
 let scoreDisplay = document.getElementById('score-display-counter');
 let currentScore = parseInt(scoreDisplay.innerHTML);
 let listenersAttached = false;
+const messageElement = document.getElementById('message-box');
 
 
 // Ensure DOM content is loaded
@@ -31,7 +32,7 @@ let listenersAttached = false;
   const defaultCombo = [0, 1, 2, 3, 4];
   let guessCombo = [];
   let successCombo = []; 
-  
+  let correctGuesses = 0;
 
   console.log(pins);
   // function to hide menu and display game
@@ -100,6 +101,7 @@ let listenersAttached = false;
   function updateLockDisplay(index, isCorrect) {
     if(isCorrect) {
       pins[index].style.backgroundColor = 'green';
+      correctGuesses += 1;
     } else {
       pins[index].style.backgroundColor = 'red';
     }
@@ -114,11 +116,15 @@ let listenersAttached = false;
       return combination;
   }
 
-  let messageElement = document.getElementById('message-box');
+  
 
   function unlockDoor() {
-      if (guessCombo.length !== 5) {
-          messageElement.textContent = 'You must pick all the locks';
+    if (guessCombo.length < 5) {
+      messageElement.textContent = 'You must select 5 pins';
+      return;
+
+    } else if (correctGuesses !== 5) {
+          messageElement.textContent = 'Incorrect guess, Try again!';
           return;
       }
       if (guessCombo.toString() === successCombo.toString()) {
@@ -146,7 +152,9 @@ let listenersAttached = false;
   
   function clearButtons() {
     guessCombo = [];
+    messageElement.textContent = '';
     currentLife += 1;
+    correctGuesses = 0;
     activateLock();
     pins.forEach(pin => {
       pin.style.backgroundColor = 'white';
@@ -159,6 +167,7 @@ let listenersAttached = false;
 
   function resetGame() {
       guessCombo = [];
+      correctGuesses = 0;
       pins.forEach(pin => {
           pin.style.backgroundColor = 'white';
       });
