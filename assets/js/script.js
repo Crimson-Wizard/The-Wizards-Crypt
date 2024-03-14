@@ -15,7 +15,7 @@ let instructionsDisplay = document.getElementById('instructions');
 let gameOverDisplay = document.getElementById('game-over-display');
 //to keep track of the life counter
 let wrongGuess = document.getElementById('wrong-guess-number');
-let currentLife = parseInt(wrongGuess.innerHTML);
+let currentGuess = parseInt(wrongGuess.innerHTML);
 //to keep track of the level counter
 let levelDisplay = document.getElementById('level-display-counter');
 let currentLevel = parseInt(levelDisplay.innerHTML);
@@ -62,6 +62,7 @@ const messageElement = document.getElementById('message-box');
       successCombo = shuffle(defaultCombo);
       activateLock();
       console.log("levelCombo", successCombo);
+      messageElement.textContent = '';
   }
 
   function noteUserGuess(index) {
@@ -134,7 +135,7 @@ const messageElement = document.getElementById('message-box');
         currentScore += 1;
 
 
-        wrongGuess.innerHTML = currentLife.toString();
+        wrongGuess.innerHTML = currentGuess.toString();
         levelDisplay.innerHTML = currentLevel.toString();
         scoreDisplay.innerHTML = currentScore.toString();
 
@@ -153,7 +154,7 @@ const messageElement = document.getElementById('message-box');
   function clearButtons() {
     guessCombo = [];
     messageElement.textContent = '';
-    currentLife += 1;
+    currentGuess += 1;
     correctGuesses = 0;
     activateLock();
     pins.forEach(pin => {
@@ -171,30 +172,43 @@ const messageElement = document.getElementById('message-box');
       pins.forEach(pin => {
           pin.style.backgroundColor = 'white';
       });
+      messageElement.textContent = '';
       startGame();
   }
 
-//function to restart the game
+//
+/**
+ * function to restart the game
+ */
 resetButton.addEventListener('click', function() {
   // Reset display settings
   gameIntro.style.display = 'none'; // Show the game intro again if needed
   gameArea.style.display = 'block'; // Hide the game area until start is clicked again
   startButton.style.display = 'none'; // Show the start button to allow starting a new game
   resetButton.style.display = 'block'; // Hide reset button until the game starts again
-
-  // Restart counters
+  currentLevel = 1; // Reset level counter to initial value
+  currentScore = 0; // Reset score counter to initial value
+  currentGuess = 0; // Reset life counter to initial value
+  messageElement.textContent = ''; // Clear any messages
+/** 
+ * Restart counters
+*/
   wrongGuess.innerHTML = '0'; // Reset life counter to initial value
   levelDisplay.innerHTML = '1'; // Reset level counter to initial value
   scoreDisplay.innerHTML = '0'; // Reset score counter to initial value
 
-  // Reset game state
-  // Reset the success combination to be set on new game start
+  /** 
+  * Reset the success combination to be set on new game start
+  */
   guessCombo = []; 
   successCombo = []; 
-  // Reset pin appearance
-  pins.forEach(pin => {
+  /** 
+   * Reset pin appearance
+  */
+    pins.forEach(pin => {
     pin.style.backgroundColor = 'white'; 
   });
 
+  startGame(); // Start the game again
 }); 
 
