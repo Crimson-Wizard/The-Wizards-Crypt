@@ -9,6 +9,7 @@
 body { 
     background: url("../images/crypt-background.webp") no-repeat center 
     center/cover;
+    background-color: #000000;
     font-family: "Creepster", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -162,7 +163,6 @@ h2 {
     margin-bottom: 100px;
     margin-left: 200px;
     margin-right: 200px;
-    
 }
 /*level styles*/
 #level {
@@ -182,7 +182,6 @@ h2 {
     justify-content: center;
     font-size: 2em;
     -webkit-text-stroke: 1px whitesmoke;
-
 }
 /*level display counter styles*/
 #level-display-counter {
@@ -191,7 +190,6 @@ h2 {
     font-size: 2em;
     margin-left: 10px;
     -webkit-text-stroke: 1px whitesmoke;
-
 }
 /*message box styles*/
 #message-box {
@@ -325,4 +323,130 @@ h2 {
     font-size: 2rem;
     -webkit-text-stroke: 1px whitesmoke;
     margin-top: 200px;
+}
+
+
+/*media query for larger devices*/
+@media screen and (min-width: 1024px) and (max-width: 1279px){
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 7rem;
+        -webkit-text-stroke: 1px whitesmoke;
+        margin-bottom: 60px;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4px;
+    }
+
+    #game-box {
+        display: flex;
+        max-width: 90%;
+    }
+
+
+
+}
+
+/*media query for tablets devices*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 5rem;
+        -webkit-text-stroke: 1px whitesmoke;
+        margin-bottom: 60px;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4px;
+    }
+
+    #game-box {
+        display: flex;
+        max-width: 100%;
+    }
+
+    #rule-box-center {
+        width: 100%;
+    }
+
+    #instructions {
+        display: flex;
+        flex-wrap: wrap;
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+
+    
+}
+
+/*media query for smaller devices*/
+@media screen and (min-width: 425px) and (max-width: 767px){
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4px;
+        font-size: 2rem;
+    }
+
+    #instructions {
+        display: flex;
+        flex-wrap: wrap;
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        margin-left: 30px;
+        margin-right: 20px;
+    }    
+    #game-box {
+        display: flex;
+        max-width: 100%;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
 }
