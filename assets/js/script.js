@@ -1,23 +1,13 @@
 /**
  * This is the main variables for the game
  */
-const pinOne = document.getElementById('pin-one-input');
-const pinTwo = document.getElementById('pin-two-input');
-const pinThree = document.getElementById('pin-three-input');
-const pinFour = document.getElementById('pin-four-input');
-const pinFive = document.getElementById('pin-five-input');
 const pins = document.querySelectorAll('.pin');
-const gameBox = document.getElementById('game-box');
 const gameIntro = document.getElementById('game-intro');
 const gameArea = document.getElementById('game-area');
 let unlockButton = document.getElementById('unlock');
 let startButton = document.getElementById('start');
 let resetButton = document.getElementById('reset-center');
 let clearButton = document.getElementById('clear');
-/**
- * to display the instructions
- */
-let instructionsDisplay = document.getElementById('instructions');
 /**
  * to display the life counter
  */
@@ -120,7 +110,7 @@ const messageElement = document.getElementById('message-box');
   function addToGuessCombo(index) {
       console.log(index);
       guessCombo.push(index);
-      console.log('guessCombo', guessCombo)
+      console.log('guessCombo', guessCombo);
   }
 /**
  * function to update the lock display
@@ -176,7 +166,7 @@ const messageElement = document.getElementById('message-box');
     pins.forEach(pin => {
       pin.style.backgroundColor = 'white';
   });
-};
+}
 /**
  * function to reset the game
  */

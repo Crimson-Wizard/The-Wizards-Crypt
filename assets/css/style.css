@@ -46,6 +46,10 @@ body {
     max-width: 70%;
     border: 3px solid #000000;
 }
+
+#game-area {
+    max-width: 90%;
+}
 /*header styles*/
 h1 {
     display: flex;
@@ -191,6 +195,7 @@ h2 {
     margin-left: 10px;
     -webkit-text-stroke: 1px whitesmoke;
 }
+
 /*message box styles*/
 #message-box {
     display: flex;
@@ -199,6 +204,8 @@ h2 {
     -webkit-text-stroke: 1px whitesmoke;
     margin-top: 20px;
     margin-bottom: 5px;
+    /* margin-right: 80px;
+    margin-left: 80px;*/
 }
 /*barrel styles*/
 #barrel {
@@ -206,8 +213,8 @@ h2 {
     justify-content: space-around;
     margin-top: 150px;
     margin-bottom: 20px;
-    margin-left: 150px;
-    margin-right: 150px;
+    /*margin-left: 150px;
+    margin-right: 150px;*/
 }
 /*pin styles*/
 .pin {
@@ -428,6 +435,9 @@ h2 {
         font-size: 3.5rem;
     }
 
+    #barrel {
+        max-width: 100%;
+    }
     h2 {
         display: flex;
         justify-content: center;
@@ -475,7 +485,7 @@ h2 {
     h1 {
         display: flex;
         justify-content: center;
-        font-size: 2rem;
+        font-size: 3rem;
         margin-top: 30px;
     }
 
