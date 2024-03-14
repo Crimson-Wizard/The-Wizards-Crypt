@@ -438,10 +438,12 @@ h2 {
         margin-bottom: 100px;
         margin-left: 30px;
         margin-right: 20px;
+        max-width: 100%;
     }    
     #game-box {
         display: flex;
         max-width: 100%;
+        
     }
 
     p {
@@ -464,7 +466,8 @@ h2 {
     h1 {
         display: flex;
         justify-content: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        margin-top: 30px;
     }
 
     h2 {
@@ -485,10 +488,17 @@ h2 {
         margin-right: 20px;
     }    
 
+    #game-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
     #rule-box {
         display: flex;
         flex-direction: column;
-        max-width: 90%;
     }
 
     #game-box {
@@ -499,7 +509,8 @@ h2 {
     p {
         display: flex;
         justify-content: center;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        
     }
 }
 
