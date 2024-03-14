@@ -41,13 +41,13 @@ body {
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    max-height: 70%;
+    max-height: 100%;
     max-width: 70%;
     border: 3px solid #000000;
 }
 /*game area styles*/
 #game-area {
-    max-width: 90%;
+    max-width: 100%;
 }
 /*header styles*/
 h1 {
@@ -61,7 +61,7 @@ h1 {
 h2 {
     display: flex;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 4rem;
     -webkit-text-stroke: 1px whitesmoke;
 }
 /*start button styles*/
@@ -183,18 +183,17 @@ h2 {
 #level-display{
     display: flex;
     justify-content: center;
-    font-size: 2em;
+    font-size: 1em;
     -webkit-text-stroke: 1px whitesmoke;
 }
 /*level display counter styles*/
 #level-display-counter {
     display: flex;
     color: #000000;
-    font-size: 2em;
-    margin-left: 10px;
+    font-size: 1em;
+    margin-left: 5px;
     -webkit-text-stroke: 1px whitesmoke;
 }
-
 /*message box styles*/
 #message-box {
     display: flex;
@@ -359,12 +358,14 @@ h2 {
     /*game container style*/
     #game-box {
         display: flex;
-        max-width: 90%;
+        max-width: 100%;
     }
     /*game area styles*/
     #game-area {
-        max-width: 90%;
+        max-width: 100%;
     }
+   
+    
 }
 
 /*media query for tablets devices*/
@@ -434,10 +435,7 @@ h2 {
         justify-content: center;
         font-size: 3.5rem;
     }
-    /*h2 styles*/
-    #barrel {
-        max-width: 100%;
-    }
+    
     /*h2 styles*/
     h2 {
         display: flex;
@@ -468,8 +466,6 @@ h2 {
     }
     /*paragraph styles*/
     p {
-        display: flex;
-        justify-content: center;
         font-size: 1.5rem;
     }
 }
