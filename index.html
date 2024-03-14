@@ -9,7 +9,7 @@
     <title>The Wizards Crypt</title>
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <meta name="description" content="The Wizards crypt is a lockpick game to steal a wizards spellbook">
-    <meta name="keywords"content="wizards crypt game, sequence game">
+    <meta name="keywords" content="wizards crypt game, sequence game">
     <meta name="author" content="crimson-wizard">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,7 @@
     
     <!--main area to contain game-->
       <section id="game-box">
+        <h2 class="hidden">Game Box</h2>
       <!--section to contain game intro and rules-->
         <section id="game-intro">
           <h2>Welcome to the Wizards Crypt</h2>
@@ -53,7 +54,10 @@
         <!--game area hidden till start games selected-->
         
         <section style="display: none;"  id = "game-area">
+          <h2 class="hidden">Game Area</h2>
+          <div id="level-display-style">
           <p id="level-display">Crypt-</p><p id="level-display-counter">1</p>
+          </div>
           <div id="message-box"></div>
             <!--div to contain game elements-->
           <div id="barrel">
@@ -74,11 +78,11 @@
           <div class="wrong-display">
             <!--div to show how many wrong guesses-->
             <div id="wrong-guess"> 
-              <p id = "wrong-guess-p" alt="This displays how many wrong guesses you have made">Wrong Guess=</p><p id = "wrong-guess-number">0</p>
+              <p id = "wrong-guess-p">Wrong Guess=</p><p id = "wrong-guess-number">0</p>
             </div>
             <!--div to show how many locks have been succesfully completed-->
             <div id = "locks-picked" >
-              <p id = "score-display" alt="locks succesfully picked">Locks Picked=<div id = "score-display-counter">0</div></p>
+              <p id = "score-display">Locks Picked=</p><p id = "score-display-counter">0</p>
             </div>
           </div>
         </section>
