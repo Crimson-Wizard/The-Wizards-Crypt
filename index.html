@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
   <head>
     <meta charset="UTF-8">
@@ -10,12 +10,12 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <meta name="description" content="The Wizards crypt is a lockpick game to steal a wizards spellbook">
     <meta name="keywords"content="wizards crypt game, sequence game">
-    <meta name="author" content="Crimson Wizard">
+    <meta name="author" content="crimson-wizard">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Creepster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap" rel="stylesheet">
-    <link link="rel" type="image/png" sizes="16x16" href="/images/icons8-wizard-16.png"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons8-wizard-16.png"> 
   </head>
   <body>
     <!--header to contain game title-->
@@ -53,7 +53,7 @@
         <!--game area hidden till start games selected-->
         
         <section style="display: none;"  id = "game-area">
-          <h2 id="level-display">Crypt-<div id="level-display-counter">1</div></h2>
+          <p id="level-display">Crypt-</p><p id="level-display-counter">1</p>
           <div id="message-box"></div>
             <!--div to contain game elements-->
           <div id="barrel">
@@ -65,33 +65,33 @@
           </div>
           <div id="buttons-center">
             <div id="clear-button">
-              <input class="btn" type="submit" id="clear" value="RESET"/>
+              <input class="btn" type="submit" id="clear" value="RESET">
             </div>
-            <div id="unlock">
-              <input type="submit" id="unlock" value="UNLOCK"/>
+            <div id="unlock-btn">
+              <input type="submit" id="unlock" value="UNLOCK">
             </div>
           </div>
           <div class="wrong-display">
             <!--div to show how many wrong guesses-->
-            <div id="wrong-guess" alt="This displays how many wrong guesses you have made"> 
-              <p id = "wrong-guess-p">Wrong Guess=<div id = "wrong-guess-number">0</div></p> 
+            <div id="wrong-guess"> 
+              <p id = "wrong-guess-p" alt="This displays how many wrong guesses you have made">Wrong Guess=</p><p id = "wrong-guess-number">0</p>
             </div>
             <!--div to show how many locks have been succesfully completed-->
-            <div id = "locks-picked" alt="locks succesfully picked">
-              <p id = "score-display">Locks Picked=<div id = "score-display-counter">0</div></p>
+            <div id = "locks-picked" >
+              <p id = "score-display" alt="locks succesfully picked">Locks Picked=<div id = "score-display-counter">0</div></p>
             </div>
           </div>
-          </div>
-      </section>
-      <nav id = "start-center">
+        </section>
+        <nav id = "start-center">
         <!--button to start game-->
         <button data-type="start-game" id="start">Start</button>
-      </nav>
-      <nav style="display: none;" id = reset-center>
-        <input type="submit" id="reset" value="RESTART"/>
-      </nav>
-      </main>
+        </nav>
+        <nav style="display: none;" id = reset-center>
+        <input type="submit" id="reset" value="RESTART">
+        </nav>
   </section>
+</main>
+
     <footer class="footer">
       <p>&copy; 2023 The Wizards Crypt</p>
     </footer>
