@@ -12,6 +12,7 @@ body {
     font-family: "Creepster", system-ui;
     font-weight: 400;
     font-style: normal;
+    max-height: 100% ;
 }
 /*style to hide headings*/
 .hidden {
