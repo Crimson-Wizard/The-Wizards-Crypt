@@ -355,7 +355,9 @@ h2 {
         max-width: 90%;
     }
 
-
+    #game-area {
+        max-width: 90%;
+    }
 
 }
 
@@ -385,6 +387,10 @@ h2 {
 
     #game-box {
         display: flex;
+        max-width: 100%;
+    }
+
+    #game-area {
         max-width: 100%;
     }
 
@@ -443,7 +449,10 @@ h2 {
     #game-box {
         display: flex;
         max-width: 100%;
-        
+    }
+
+    #game-area {
+        max-width: 100%;
     }
 
     p {
@@ -494,6 +503,7 @@ h2 {
         justify-content: center;
         align-items: center;
         height: 100%;
+        max-width: 100%;
     }
 
     #rule-box {
