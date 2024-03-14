@@ -13,11 +13,11 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-
+/*style to hide headings*/
 .hidden {
     display: none;
 }
-
+/*main container style*/
 .main {
     display: flex;
     flex-direction: column;
@@ -53,14 +53,14 @@ h1 {
     -webkit-text-stroke: 1px whitesmoke;
     margin-bottom: 60px;
 }
-
+/*h2 styles*/
 h2 {
     display: flex;
     justify-content: center;
     font-size: 3rem;
     -webkit-text-stroke: 1px whitesmoke;
 }
-
+/*start button styles*/
 #start {
     display: flex;
     justify-content: space-around;
@@ -79,15 +79,16 @@ h2 {
     background-color: #72572f;
     margin: 20px;
 }
-
+/*start button center styles*/
 #start-center {
     display: flex;
     justify-content: center;
 }
+/*message box styles*/
 #message-box {
     text-align: center;
 }
-
+/*reset button styles*/
 #reset {
     display: flex;
     justify-content: space-around;
@@ -106,7 +107,7 @@ h2 {
     background-color: #72572f;
     margin: 20px;
 }
-
+/*rule box styles*/
 .rule-box {
     display: flex;
     flex-direction: column;
@@ -126,14 +127,14 @@ h2 {
     max-width: 70%;
     border: 3px solid #000000;
 }
-
+/*rule box center styles*/
 #rule-box-center {
     display: flex;
     justify-content: center;
     text-align: center;
     margin-bottom: 30px;
 }
-
+/*rules stlyes*/
 #rules {
     display: flex;
     justify-content: center;
@@ -151,7 +152,7 @@ h2 {
     background-color: #72572f;
     margin: 20px;
 }
-
+/*instructions styles*/
 #instructions {
     display: flex;
     flex-wrap: wrap;
@@ -164,19 +165,19 @@ h2 {
     
 }
 
-
+/*level styles*/
 #level {
     text-align: center;
     margin-bottom: 20px;
 }
-
+/*level display styles*/
 #level-display-style{
     display: flex;
     justify-content: center;
     font-size: 2em;
     -webkit-text-stroke: 1px whitesmoke;
 }
-
+/*level display paragraph styles*/
 #level-display{
     display: flex;
     justify-content: center;
@@ -184,7 +185,7 @@ h2 {
     -webkit-text-stroke: 1px whitesmoke;
 
 }
-
+/*level display counter styles*/
 #level-display-counter {
     display: flex;
     color: #000000;
@@ -193,7 +194,7 @@ h2 {
     -webkit-text-stroke: 1px whitesmoke;
 
 }
-
+/*message box styles*/
 #message-box {
     display: flex;
     justify-content: center;
@@ -201,9 +202,8 @@ h2 {
     -webkit-text-stroke: 1px whitesmoke;
     margin-top: 20px;
     margin-bottom: 5px;
-
 }
-
+/*barrel styles*/
 #barrel {
     display: flex;
     justify-content: space-around;
@@ -241,13 +241,13 @@ h2 {
     background-color:  #72572f ;
     margin: 20px;
 }
-
+/*buttons center styles*/
 #buttons-center {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-
+/*clear button styles*/
 #clear {
     display: flex;
     justify-content: center;
@@ -265,18 +265,18 @@ h2 {
     background-color:  #72572f ;
     margin: 20px;
 }
-
+/*center styles*/
 #clear-center {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+/*reset styles*/
 #reset{
     display: flex;
     justify-content: center;
 }
-
+/*reset button styles*/
 #btn-reset {
     display: flex;
     justify-content: center;
@@ -294,6 +294,7 @@ h2 {
     background-color:  #72572f ;
     margin: 20px;
 }
+/*wrong display styles*/
 .wrong-display {
     display: flex;
     justify-content: center;
@@ -301,6 +302,7 @@ h2 {
     margin-bottom: 5px;
     -webkit-text-stroke: 1px whitesmoke;
 }
+/*wrong guess styles*/
 #wrong-guess {
     display: flex;
     color: #000000;
@@ -309,15 +311,15 @@ h2 {
     -webkit-text-stroke: 1px whitesmoke;
 
 }
-
+/*locks picked styles*/
 #locks-picked {
     display: flex;
     color: #000000;
     font-size: 2em;
     margin-left: 10px;
     -webkit-text-stroke: 1px whitesmoke;
-
 }
+/*footer styles*/
 .footer {
     display: flex;
     justify-content: center;
