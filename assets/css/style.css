@@ -4,7 +4,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 /*genral styles*/
 body { 
     background: url("../images/crypt-background.webp") no-repeat center 
@@ -46,7 +45,7 @@ body {
     max-width: 70%;
     border: 3px solid #000000;
 }
-
+/*game area styles*/
 #game-area {
     max-width: 90%;
 }
@@ -335,6 +334,7 @@ h2 {
 
 /*media query for larger devices*/
 @media screen and (min-width: 1024px) and (max-width: 1279px){
+/*main container style*/
     #main {
         display: flex;
         flex-direction: column;
@@ -342,7 +342,7 @@ h2 {
         align-items: center;
         height: 100%;
     }
-
+    /*h1 styles*/
     h1 {
         display: flex;
         justify-content: center;
@@ -350,26 +350,26 @@ h2 {
         -webkit-text-stroke: 1px whitesmoke;
         margin-bottom: 60px;
     }
-
+    /*h2 styles*/
     h2 {
         display: flex;
         justify-content: center;
         margin-bottom: 4px;
     }
-
+    /*game container style*/
     #game-box {
         display: flex;
         max-width: 90%;
     }
-
+    /*game area styles*/
     #game-area {
         max-width: 90%;
     }
-
 }
 
 /*media query for tablets devices*/
 @media screen and (min-width: 768px) and (max-width: 1023px){
+    /*main container style*/
     #main {
         display: flex;
         flex-direction: column;
@@ -377,7 +377,7 @@ h2 {
         align-items: center;
         height: 100%;
     }
-
+    /*h1 styles*/
     h1 {
         display: flex;
         justify-content: center;
@@ -385,26 +385,26 @@ h2 {
         -webkit-text-stroke: 1px whitesmoke;
         margin-bottom: 60px;
     }
-
+    /*h2 styles*/
     h2 {
         display: flex;
         justify-content: center;
         margin-bottom: 4px;
     }
-
+    /*game container style*/
     #game-box {
         display: flex;
         max-width: 100%;
     }
-
+    /*game area styles*/
     #game-area {
         max-width: 100%;
     }
-
+    /*rule box styles*/
     #rule-box-center {
         width: 100%;
     }
-
+    /*instructions styles*/
     #instructions {
         display: flex;
         flex-wrap: wrap;
@@ -415,12 +415,12 @@ h2 {
         margin-left: 30px;
         margin-right: 20px;
     }
-
     
 }
 
 /*media query for smaller devices*/
 @media screen and (min-width: 425px) and (max-width: 767px){
+    /*main container style*/
     #main {
         display: flex;
         flex-direction: column;
@@ -428,23 +428,24 @@ h2 {
         align-items: center;
         height: 100%;
     }
-
+    /*h1 styles*/
     h1 {
         display: flex;
         justify-content: center;
         font-size: 3.5rem;
     }
-
+    /*h2 styles*/
     #barrel {
         max-width: 100%;
     }
+    /*h2 styles*/
     h2 {
         display: flex;
         justify-content: center;
         margin-bottom: 4px;
         font-size: 2rem;
     }
-
+    /*instructions style*/
     #instructions {
         display: flex;
         flex-wrap: wrap;
@@ -455,16 +456,17 @@ h2 {
         margin-left: 30px;
         margin-right: 20px;
         max-width: 100%;
-    }    
+    } 
+    /*game container style*/   
     #game-box {
         display: flex;
         max-width: 100%;
     }
-
+    /*game area styles*/
     #game-area {
         max-width: 100%;
     }
-
+    /*paragraph styles*/
     p {
         display: flex;
         justify-content: center;
@@ -474,6 +476,7 @@ h2 {
 
 /*media query for mobile devices*/
 @media screen and (min-width:280px) and (max-width: 424px){
+    /*main container style*/
     #main {
         display: flex;
         flex-direction: column;
@@ -481,21 +484,21 @@ h2 {
         align-items: center;
         height: 100%;
     }
-
+    /*h1 styles*/
     h1 {
         display: flex;
         justify-content: center;
         font-size: 3rem;
         margin-top: 30px;
     }
-
+    /*h2 styles*/
     h2 {
         display: flex;
         justify-content: center;
         margin-bottom: 4px;
         font-size: 1rem;
     }
-
+    /*instructions style*/
     #instructions {
         display: flex;
         flex-wrap: wrap;
@@ -506,7 +509,7 @@ h2 {
         margin-left: 30px;
         margin-right: 20px;
     }    
-
+    /*game container style*/
     #game-area {
         display: flex;
         flex-direction: column;
@@ -515,17 +518,17 @@ h2 {
         height: 100%;
         max-width: 100%;
     }
-
+    /*rule box style*/
     #rule-box {
         display: flex;
         flex-direction: column;
     }
-
+    /*game box style*/
     #game-box {
         display: flex;
         max-width: 100%;
     }
-
+    /*paragraph style*/
     p {
         display: flex;
         justify-content: center;
