@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-
+<!--html to contain head, body and game elements-->
 <html lang="en">
-
+  <!--head to contain meta data, title, css and fonts-->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,19 +20,25 @@
   <body>
     <!--header to contain game title-->
     <header>
+      <!--h1 to contain game title-->
       <h1>The Wizards Crypt</h1>
     </header>
-    <main class="main">
-    
     <!--main area to contain game-->
+    <main class="main">
+    <!--section to contain game-->
       <section id="game-box">
+        <!--h2 to contain game title-->
         <h2 class="hidden">Game Box</h2>
       <!--section to contain game intro and rules-->
         <section id="game-intro">
+          <!--h2 to contain game intro title-->
           <h2>Welcome to the Wizards Crypt</h2>
+          <!--div to contain game intro-->
           <div id="rule-box-center">
           <article class ="rule-box">
+            <!--h2 to contain game rules title-->
               <h2>Game Rules</h2>
+              <!--ul to contain game rules-->
                 <ul id="instructions">
                   
                   <li> Select the lock pin buttons in a sequnece to unlock the door.
@@ -52,12 +58,14 @@
             </div>
         </section>
         <!--game area hidden till start games selected-->
-        
         <section style="display: none;"  id = "game-area">
+          <!--h2 to contain game area title-->
           <h2 class="hidden">Game Area</h2>
+          <!--div to contain level display-->
           <div id="level-display-style">
           <p id="level-display">Crypt-</p><p id="level-display-counter">1</p>
           </div>
+          <!--div to contain message box-->
           <div id="message-box"></div>
             <!--div to contain game elements-->
           <div id="barrel">
@@ -67,14 +75,18 @@
             <div class="pin" id="pin-four-input"  data-index="3"></div>
             <div class="pin" id="pin-five-input" data-index="4"></div>
           </div>
+          <!--div to contain clear button/unlock-->
           <div id="buttons-center">
+            <!--div to contain clear button-->
             <div id="clear-button">
               <input class="btn" type="submit" id="clear" value="RESET">
             </div>
+            <!--div to contain unlock button-->
             <div id="unlock-btn">
               <input type="submit" id="unlock" value="UNLOCK">
             </div>
           </div>
+          <!--div to contain wrong guess and locks picked-->
           <div class="wrong-display">
             <!--div to show how many wrong guesses-->
             <div id="wrong-guess"> 
@@ -86,16 +98,18 @@
             </div>
           </div>
         </section>
+        <!--nav to contain start button-->
         <nav id = "start-center">
         <!--button to start game-->
         <button data-type="start-game" id="start">Start</button>
         </nav>
+        <!--nav to contain restart button-->
         <nav style="display: none;" id = reset-center>
         <input type="submit" id="reset" value="RESTART">
         </nav>
   </section>
 </main>
-
+    <!--footer to contain game title-->
     <footer class="footer">
       <p>&copy; 2023 The Wizards Crypt</p>
     </footer>

@@ -41,6 +41,7 @@ const messageElement = document.getElementById('message-box');
       startButton.addEventListener('click', startGame);
       unlockButton.addEventListener('click', unlockDoor);
       clearButton.addEventListener('click', clearButtons);
+    
 
   });
   function activateLock() {
@@ -59,6 +60,7 @@ const messageElement = document.getElementById('message-box');
       gameArea.style.display = 'block';
       startButton.style.display = 'none';
       resetButton.style.display = 'block';
+      
       successCombo = shuffle(defaultCombo);
       activateLock();
       console.log("levelCombo", successCombo);
